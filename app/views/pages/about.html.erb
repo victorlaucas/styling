@@ -1,2 +1,86 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+<div class="container">
+  <div class="app-card-container">
+    <div class="card">
+      <h1>About Me</h1>
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <%= image_tag "victor.JPG", width: 300, alt: "profile image", class: 'profile-img' %>
+
+          <!-- <div class="skills">
+            <@skills.each do |skill| %>
+              <div class="skill">
+                <h4><skill.title %></h4>
+                <div class="progress">
+                  <div
+                    class="progress-bar progress-bar-striped bg-warning"
+                    role="progressbar"
+                    aria-valuenow="< skill.percent_utilized %>"
+                    aria-valuemax="100"
+                    style="width: < skill.percent_utilized %>%"
+                  ></div>
+                </div>
+              </div>
+             end %>
+          </div> -->
+        </div>
+
+
+        <div class="col-md-8">
+          <p class="about-me">Just trying to be a sucessful dev.</p>
+
+          <p>
+            <button
+              class = "btn btn-primary"
+              type = "button"
+              data-toggle = "collapse"
+              data-target = "#jobHistory"
+              aria-expanded = "false"
+              aria-controller = "jobHistory"
+            >
+              Job History
+            </button>
+
+             <button
+              class = "btn btn-primary"
+              type = "button"
+              data-toggle = "collapse"
+              data-target = "#education"
+              aria-expanded = "false"
+              aria-controller = "education"
+            >
+              Education
+            </button>
+          </p>
+
+          <p>
+            <div class="collapse" id="jobHistory">
+              <div class="card card-block">
+                Full Stack Web Developer 
+              </div>
+              <div class="card card-block">
+                T-Mobile Retail Sales Associate 
+              </div>
+
+              <div class="card card-block">
+                Jiffy Lube Senior Lube Technician 
+              </div>
+            </div>
+
+            <div class="collapse" id="education">
+              <div class="card card-block">
+                University of Utah <br>
+                BS Computer Engineering - In Progress
+              </div>
+
+              <div class="card card-block">
+                Bottega Tech <br>
+                Full Stack Web Development - In Progress
+              </div>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  

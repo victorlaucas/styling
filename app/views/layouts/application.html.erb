@@ -9,9 +9,35 @@
   </head>
 
   <body>
-    <%= render 'shared/nav' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+
+          <%= video_tag(
+              'Escalate.mp4',
+              id: 'background',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              poster: 'Escalate.jpg'
+            )
+            %>
+
+          <%= render 'shared/nav' %>
+
+          <% if current_user %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Register", new_user_registration_path %>
+            <%= link_to "Sign In", new_user_session_path %>
+          <% end %>
+
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+          <%= yield %>
+
+        </div>
+      </div>
+    </div>
   </body>
 </html>
